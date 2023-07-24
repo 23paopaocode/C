@@ -1,0 +1,41 @@
+void bubble_sort(int arr[],int sz)
+{
+
+	//确定冒泡排序的趟数
+	int i = 0;
+	for (i = 0;i<sz-1;i++)
+	{
+		int flag = 1;//假设这一趟已经有序            在8次循环中途完成了从小到大的排序时，可以直接终止剩下的判断进程，有效的提升了程序运行效率。    
+		//每一趟冒泡排序
+		int j = 0;
+		for(j=0;j<sz-1-i;j++)       //完成第一个大循环后，最后一个数是最大值，不用参与下一轮比较，以此类推每完成一次大循环都会增加一个数不参与之后的比较。
+		{
+			if(arr[j]>arr[j+1])
+			{
+				int tmp = 0;
+				tmp = arr[j];
+				arr[j] =arr[j+1];
+			  arr[j+1] = tmp;
+				flag = 0;//本趟排序的数据并不完全有序
+			}	
+		}
+		if (flag == 1) 
+		{
+			break;           
+			}
+	}
+}
+
+
+int main()
+{
+	int i = 0;
+	int arr[] = {1,2,9,4,3,6,7,8,5,10};
+	int sz = sizeof(arr)/sizeof(arr[0]);
+	bubble_sort(arr,sz); 
+	for(i=0;i<sz;i++)
+	{
+		printf("%d ",arr[i]);
+	}
+	return 0;
+}
