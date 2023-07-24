@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 //打印一个数二进制中1的个数（高效）
 int count_bit_one(int n)
