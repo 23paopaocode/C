@@ -1,5 +1,31 @@
 
 #include<stdio.h>
+#include<assert.h>
+//自建strlen()函数
+int my_strlen(const char *str)
+{
+	int count = 0;
+	assert(str !=NULL);//保证指针的有效性
+	while(*str !='\0')
+	{
+		count++;
+		str++;
+	}
+	return count;
+}
+
+
+int main()
+{
+	char arr[] = "abcdef";
+	int len = my_strlen(arr);
+	printf("%d\n",len);
+	return 0;
+}
+//////////////////////////////////////////////////////////////////
+
+
+#include<stdio.h>
 //打印一个数二进制中1的个数（高效）
 int count_bit_one(int n)
 {
