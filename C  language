@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<assert.h>
-//旋转字符串-暴力旋转
+//旋转字符串(左旋)-暴力旋转
 //void left_move(char*arr,int k)
 //{
 //	int i = 0;
